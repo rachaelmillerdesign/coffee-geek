@@ -1,0 +1,382 @@
+
+* {
+  font-family: 'Raleway', sans-serif;
+  // font-size: 62.5%;
+}
+
+// espresso:	#2B2211
+// coffee: 	#4F3828
+// latte:    #B28C5F
+// #fff9f2
+// capuccino #F0E4CC
+
+// ~~~~~~~~~~~~~~~~~~~~~
+// HIDE FORMS UNLESS SIGNED IN / SIGNED UP
+// ~~~~~~~~~~~~~~~~~~~~~
+
+.hidden {
+  display: none;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~
+// MODALS
+// ~~~~~~~~~~~~~~~~~~~~~
+/* The Modal (background) */
+.modal {
+  background-color: #e2f984;
+  outline: none;
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: auto;
+}
+
+// .modal-body {
+//   background-color: #e2f984;
+// }
+
+// /* Modal Content/Box */
+// .modal-content {
+//   // background-color: #e2f984;
+//   // margin: 15% auto; /* 15% from the top and centered */
+//   // padding: 20px;
+//   border: 1px solid #888;
+//   width: 80%; /* Could be more or less, depending on screen size */
+// }
+
+/* The Close Button */
+.close {
+  border: none;
+  outline: none;
+  color: #9ece00;
+  float: right;
+  font-size: 1.4rem;
+  // font-size: 24px;
+  font-weight: 300;
+  padding: 4vw;
+}
+
+.close-fail {
+  border: none;
+  outline: none;
+  color: #f98900;
+  float: right;
+  // font-size: 24px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 4vw;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~
+// BODY
+// ~~~~~~~~~~~~~~~~~~~~~
+body {
+  // background-color: #2B2211;
+  // background-image: url('https://i.imgur.com/pKjExxc.jpg');
+  background-image: url('https://i.imgur.com/VLDGvOg.jpg');
+  margin: 0 auto;
+}
+
+#maxWidth {
+  background-color: #f0e4cd;
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  #logo {
+    -webkit-transform: rotate(90deg) translateX(-400px) translateY(-15%); /* Safari */
+    transform: rotate(90deg) translateX(-610%) translateY(-15%);
+    transform-origin: bottom left;
+    margin: 0 auto;
+    float: none;
+    max-width: 12vw;
+  }
+  #spacer{
+    height: 18vw;
+  }
+}
+
+#logo {
+  float: left;
+  margin: 1%;
+  position: absolute;
+  // max-width: 15%;
+  max-height: 500px;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~
+// FONTS
+// ~~~~~~~~~~~~~~~~~~~~~
+h3 {
+  // color: #382f25;
+  text-align: left;
+  float: left;
+  font-weight: 400;
+  // font-size: 4vw;
+  font-size: 1.2rem;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~
+// TABLES
+// ~~~~~~~~~~~~~~~~~~~~~
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+  // margin-left: auto;
+  // margin-right: auto;
+  // margin-top: 15px;
+}
+
+td,tr {
+  border: 1px solid #F0E4CC;
+  background-color: white;
+  color: #2B2211;
+  font-size: .65rem;
+  font-weight: 600;
+  padding: 1vw;
+}
+
+th {
+  color: #2B2211;
+  font-size: .8rem;
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 1.5vw 0 1.5vw 0;
+  word-wrap: break-word;
+  white-space: nowrap;
+  border: 1px solid #4F3828;
+  background-color: #f98900;
+  text-transform: uppercase;
+}
+
+p {
+margin-right: 20px;
+}
+// ~~~~~~~~~~~~~~~~~~~~~
+// SIGN IN OUT UP ETC FORMS
+// ~~~~~~~~~~~~~~~~~~~~~
+fieldset {
+  display: block;
+  -webkit-margin-start: 2px;
+  -webkit-margin-end: 2px;
+  // -webkit-padding-before: 0.35em;
+  // -webkit-padding-start: 0.75em;
+  // -webkit-padding-end: 0.75em;
+  // -webkit-padding-after: 0.625em;
+  -webkit-padding-before: 0em;
+  -webkit-padding-start: 0em;
+  -webkit-padding-end: 0em;
+  -webkit-padding-after: 0em;
+  min-width: -webkit-min-content;
+  border-width: 0;
+  // border-style: groove;
+  // border-color: threedface;
+  // border-image: initial;
+}
+// legend {
+//   display: block;
+    // -webkit-padding-start: 2px;
+    // -webkit-padding-end: 2px;
+    // border-width: initial;
+    // border-style: none;
+    // border-color: initial;
+    // border-image: initial;
+// }
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    text-align: left;
+}
+
+input {
+  display: inline-block;
+  float: right;
+  clear: right;
+  padding: 2.5px;
+}
+
+input[type='submit'] {
+  background-color:#9ece00;
+  border: none;
+  padding: 2.5px;
+  background-color: none;
+  outline: none;
+}
+
+input[type='submit'].focus {
+    outline: none;
+}
+
+button {
+  border: 0px;
+  padding: 0px
+}
+
+form {
+  padding: 1vw;
+}
+
+#oneTasting,
+#getOneTastingByIdAndEditForm {
+   padding: 0;
+}
+
+#notes {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width:100%;
+  height:100px;
+}
+
+.submit {
+  padding: 8px;
+  margin: 10px;
+  float: right;
+  // font-size: 3vw;
+  font-size: 1rem;
+  border: none;
+  background-color: #9ece00;
+}
+
+.active, .submit:hover {
+  background-color: #9ece00;
+  border: none;
+  -webkit-appearance: none;
+  background-color: none;
+}
+
+#fave {
+  background-color: white;
+  border: 1px solid #4F3828;
+  zoom: 2;
+}
+
+#myId, #coffeeId {
+  color: #2B2211;
+  background-color: #9ece00;
+  width: 100%;
+  // border: 1px solid #4F3828;
+  text-align: right;
+  font-weight: 500;
+  height: 3vw;
+  font-size: 1.5rem;
+  // padding-bottom: 8vw;
+}
+
+#submitId {
+  float: right;
+  background-color: #9ece00;
+}
+
+#editTastingButton {
+  float: right;
+  border: none;
+}
+// .save {
+//   border: none;
+//   background-color: #f98900;
+//   float: right;
+// }
+#sign-up {
+  border-bottom: 1px solid black;
+}
+
+#oneTasting {
+  background-color: white;
+}
+
+#submitEdit {
+  padding: 1vw;
+  background-color: #9ece00;
+  font-size: 1rem;
+
+}
+
+#cancelEdit {
+  padding: 1vw;
+  background-color: #f98900;
+  font-size: 1rem;
+}
+// ~~~~~~~~~~~~~~~~~~~~~
+// ACCORDION AND PANELS
+// ~~~~~~~~~~~~~~~~~~~~~
+.accordion {
+  background-color: #b28c5e;
+  color: #382f25;
+  cursor: pointer;
+  padding: 3vh;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  // font-size: 6vw;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    color: white;
+    background-color: #78572e;
+}
+
+.panel {
+  // padding: 0 3vm;
+  display: none;
+  background-color: B28C5F;
+  // overflow: hidden;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~
+// STAR RATING
+// ~~~~~~~~~~~~~~~~~~~~~
+.star {
+float: right;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 0;
+   color: gold;
+}
