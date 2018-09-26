@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div id="spacer">
+    <img id="logo" src="https://i.imgur.com/44LSWRh.png?1">
+  </div>
+
+  <div id="maxWidth">
+    <!-- The Modal -->
+    <div class="modal" id="signInSuccess" tabindex="-1" role="dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>sign in successful!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="signInFailure" tabindex="-1" role="dialog">
+      <button type="button" class="close-fail" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>sign in failed!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="signUpSuccess" tabindex="-1" role="dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>sign up successful!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="signUpFailure" tabindex="-1" role="dialog">
+      <button type="button" class="close-fail" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>sign up failed!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="signOutSuccess" tabindex="-1" role="dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>sign out successful!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="signOutFailure" tabindex="-1" role="dialog">
+      <button type="button" class="close-fail" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>sign out failed!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="changePasswordSuccess" tabindex="-1" role="dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>password changed!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="changePasswordFailure" tabindex="-1" role="dialog">
+      <button type="button" class="close-fail" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>password not changed!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="addCoffeeSuccess" tabindex="-1" role="dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>coffee added!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="addCoffeeFailure" tabindex="-1" role="dialog">
+      <button type="button" class="close-fail" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>coffee not added!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="addTastingSuccess" tabindex="-1" role="dialog">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>tasting added!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="addTastingFailure" tabindex="-1" role="dialog">
+      <button type="button" class="close-fail" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>tasting not added!</h4>
+        </div>
+      </button>
+    </div>
+
+    <div class="modal" id="getMyCoffeesFailure" tabindex="-1" role="dialog">
+      <button type="button" class="close-fail" data-dismiss="modal" aria-label="Close">
+        <div class="modal-body">
+          <h4>please sign in to view your coffees!</h4>
+        </div>
+      </button>
+    </div>
+
+    <button class="accordion">SIGN IN / SIGN UP</button>
+    <div class="panel">
+      <div id="myId" class="hidden"></div>
+      <form id="sign-up">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign up!">
+        </fieldset>
+      </form>
+      <form id="sign-in">
+        <fieldset>
+          <legend>Sign in!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign in!">
+        </fieldset>
+      </form>
+
+      <form id="sign-out" class="hidden">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" value="Sign out!">
+        </fieldset>
+      </form>
+
+      <form id="change-password" class="hidden">
+        <fieldset>
+          <legend>Change Password!</legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password!">
+        </fieldset>
+      </form>
+    </div>
+
+    <button class="accordion">ADD COFFEE</button>
+    <form id="coffee" class="panel">
+      <div id="coffeeId" class="hidden"></div>
+      <fieldset>
+        <label for="roaster">ROASTER</label>
+        <input type="text" id="roaster" name="coffee[roaster]">
+        <label for="blend">BLEND</label>
+        <input type="text" id="blend" name="coffee[blend]">
+        <label for="fave">FAVORITE</label>
+        <input type="checkbox" id="fave" name="coffee[favorite]">
+        <label class="rating">GNITAR</label>
+        <div class=star><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>
+        <label for='id' class="hidden">ID</label>
+        <input type="text" class="hidden" id="ID" name="coffee[id]">
+        <button class="submit" value="coffee">SAVE</button>
+      </fieldset>
+    </form>
+    <!-- trying to wake up gh-pages-->
+    <button class="accordion" id="getAllCoffees">VIEW ALL COFFEES</button>
+    <div id="myCoffeesTable" class="panel"></div>
+
+    <button class="accordion">ADD TASTING</button>
+    <form id="tasting" class="panel">
+      <fieldset>
+        <label for="coffee_id">coffee ID</label>
+        <input type="number" id="coffee_id" name="tasting[coffee_id]">
+        <label for="date">date</label>
+        <input type="date" id="date" name="tasting[date]">
+        <label for="tasting_notes">TASTING NOTES</label>
+        <input type="text" id="notes" name="tasting[tasting_notes]">
+        <label for="grams_in">grams in</label>
+        <input type="number" id="grams_in" name="tasting[grams_in]">
+        <label for="grams_out">grams out</label>
+        <input type="number" id="grams_out" name="tasting[grams_out]">
+        <label for="time">time</label>
+        <input type="text" id="time" name="tasting[time]">
+        <label for="temperature">temperature</label>
+        <input type="number" id="temperature" name="tasting[temperature]">
+        <label for="extraction_notes">extraction notes</label>
+        <input type="text" id="extraction_notes" name="tasting[extraction_notes]">
+        <button class="submit" value="tasting">SAVE</button>
+      </fieldset>
+    </form>
+
+    <button class="accordion" id="getAllTastings">VIEW ALL TASTINGS</button>
+    <div id="allTastingsTable" class="panel"></div>
+
+    <button class="accordion" id="getOneTasting">GET ONE TASTING</button>
+    <form id="getOneTastingById" class="panel">
+      <fieldset id="oneTasting">
+        <input type="text" name="id" placeholder="enter tasting ID">
+        <button id="submitId" class="submit">GET TASTING</button>
+        <div id="singleTastingTable" class="hidden"></div>
+      </fieldset>
+    </form>
+
+    <!-- <button id="editTastingButton">EDIT TASTING</button>
+  <form id="getOneTastingByIdAndEdit" class="hidden">
+    <fieldset>
+      <input type="text" name="id" placeholder="enter tasting ID">
+      <button id="submitIdForEdit" class="submit hidden">GET TASTING</button>
+      <div id="singleTastingTableForEdit" class="hidden"> </div>
+      <button id="submitEdit" class="submit hidden">SAVE EDIT</button>
+    </fieldset>
+  </form> -->
+
+    <form id="getOneTastingByIdAndEditForm">
+      <fieldset>
+        <!-- <input type="text" name="id" class="hidden"> -->
+        <!-- <div id="singleTastingTableForEdit"> </div> -->
+        <!-- <button id="submitEdit" class="submit">SAVE EDIT</button> -->
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>
