@@ -498,12 +498,10 @@ const generateAllTastingsTable = function (data) {
     tableData = document.createElement('td')
     tableData.innerHTML = data.tastings[row]['extraction_notes']
     tableRow.appendChild(tableData)
-    // tableData = document.createElement('button')
-    // tableData.innerHTML = "<button type ='button' id='editTastingButton'>EDIT</button>"
-    // tableRow.appendChild(tableData)
     table.appendChild(tableRow)
   }
   document.getElementById('allTastingsTable').appendChild(table)
+  $('table tr th').addClass('tastingsHeader')
   // console.log('adding all tastings table', table)
 }
 
