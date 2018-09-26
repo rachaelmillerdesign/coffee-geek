@@ -46,7 +46,7 @@ const changePassword = function (data) {
 }
 
 const onTastingSubmit = function (data) {
-  console.log('inside api.onTastingSubmit and the data is', data)
+//  console.log('inside api.onTastingSubmit and the data is', data)
   return $.ajax({
     url: config.apiUrl + '/tastings',
     method: 'POST',
@@ -147,7 +147,7 @@ const onGetOneTastingById = function (data) {
 // }
 
 const onEditTasting = function (data) {
-  console.log('inside api.oneditTasting and the data is', data)
+//  console.log('inside api.oneditTasting and the data is', data)
   return $.ajax({
     url: config.apiUrl + '/tastings/' + data.id,
     method: 'PATCH',
