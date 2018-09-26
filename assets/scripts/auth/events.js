@@ -116,7 +116,7 @@ const getOneTastingById = function (event) {
 }
 
 const getOneTastingByIdAndEdit = function (event) {
-  console.log('in getOneTastingByIdAndEdit, editTastingButton clicked')
+//  console.log('in getOneTastingByIdAndEdit, editTastingButton clicked')
   event.preventDefault()
 
   const data = getFormFields(this)
@@ -127,13 +127,13 @@ const getOneTastingByIdAndEdit = function (event) {
 
 const editTasting = function (data) {
   event.preventDefault()
-  console.log('edittasting button clicked')
+//  console.log('edittasting button clicked')
   // $('#editTastingButton').addClass('hidden')
   $('#getOneTastingByIdAndEdit').removeClass('hidden')
   $('#submitIdForEdit').removeClass('hidden')
 
   const fields = getFormFields(this)
-  console.log(data)
+//  console.log(data)
   api.onEditTasting(fields)
     .then(ui.getOneTastingByIdAndEditSuccess)
     .catch(ui.editTastingFailure)
