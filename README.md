@@ -12,7 +12,7 @@ The deployed sites can be found here:
 
 back end: https://quiet-fjord-54164.herokuapp.com/
 
-front end: https://rachaelmillerdesign.github.io/coffee-geek-miller
+front end: https://rachaelmillerdesign.github.io/coffee-geek
 ![Imgur](https://i.imgur.com/qHO3fKu.jpg)
 
 This project has required me to build my first back end app, with a front end to match.  In doing so I have:
